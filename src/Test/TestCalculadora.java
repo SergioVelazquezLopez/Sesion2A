@@ -1,13 +1,34 @@
 package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import sesion2A.Calculadora;
 
-class CalculadoraTest {
+class TestCalculadora {
 
-    Calculadora calc = new Calculadora();
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+	}
+
+	Calculadora calc = new Calculadora();
 
     @Test
     void testSuma() {
@@ -33,4 +54,5 @@ class CalculadoraTest {
     void testDividePor0() {
         assertEquals(-1, calc.divide(10, 0));
     }
+
 }
